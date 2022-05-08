@@ -4,7 +4,7 @@ import { Pzzhg000 } from './features/pzzhg000/Pzzhg000'
 import { Pzzhg001 } from './features/pzzhg001/Pzzhg001'
 import { Pzzhg002 } from './features/pzzhg002/Pzzhg002'
 
-export const GenerationPage = () => {
+export const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -15,5 +15,3 @@ export const GenerationPage = () => {
     </BrowserRouter>
   )
 }
-
-export default GenerationPage
