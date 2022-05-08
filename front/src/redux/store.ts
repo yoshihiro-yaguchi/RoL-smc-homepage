@@ -1,11 +1,8 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
 import { pzzhg000States } from '../features/pzzhg000/reducer'
 
-import generationReducer from './generation'
-
 export const store = configureStore({
   reducer: {
-    generationReducer: generationReducer,
     pzzhg000Actions: pzzhg000States.reducer,
   },
 })
