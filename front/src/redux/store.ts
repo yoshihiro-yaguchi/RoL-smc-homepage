@@ -1,5 +1,5 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
-import { pzzhg000States } from '../features/pzzhg000/reducer'
+import { pzzhg000States } from 'features/pzzhg000/reducer'
 
 export const store = configureStore({
   reducer: {

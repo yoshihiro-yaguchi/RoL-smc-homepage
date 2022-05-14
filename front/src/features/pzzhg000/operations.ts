@@ -1,4 +1,4 @@
-import { AppThunk } from '../../redux/store'
+import { AppThunk } from 'redux/store'
 import { actions as pzzhg000Actions } from './reducer'
 
 export const pzzjg000Operations = {

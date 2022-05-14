@@ -1,5 +1,5 @@
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import { RootState } from '../../redux/store'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { RootState } from 'redux/store'
 import { pzzjg000Operations } from './operations'
 
 export const Pzzhg000 = () => {
