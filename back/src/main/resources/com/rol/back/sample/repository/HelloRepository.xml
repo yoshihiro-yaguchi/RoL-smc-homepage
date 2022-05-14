@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.rol.back.repository.HelloRepository">
+<mapper namespace="com.rol.back.sample.repository.HelloRepository">
     <select id="search" resultType="String">
         SELECT col1, col2, col3 FROM ex_table where col1 = 'a'
     </select>

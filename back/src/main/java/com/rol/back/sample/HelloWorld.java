@@ -1,4 +1,4 @@
-package com.rol.back;
+package com.rol.back.sample;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
