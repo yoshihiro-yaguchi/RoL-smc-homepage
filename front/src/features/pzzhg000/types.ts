@@ -9,11 +9,13 @@ export interface pzzjg000Form {
  * メイン画面ステート
  */
 interface pzzjg000FormState {
+  hoge: string
   counter: number
 }
 /**
  * メイン画面初期化
  */
 export const initPzzjg000FormState: pzzjg000FormState = {
+  hoge: '',
   counter: 0,
 }
