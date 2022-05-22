@@ -16,10 +16,10 @@ export const headerStates = createSlice({
     // },
     onClickButtonhandle: (state, action: PayloadAction<{ name: string }>) => {
       // スタイル初期化
-      state.headerScreenState.aboutStyle = {}
-      state.headerScreenState.businessStyle = {}
-      state.headerScreenState.blogStyle = {}
-      state.headerScreenState.contactStyle = {}
+      state.headerScreenState.aboutStyle = { '&:hover': { borderBottom: '1px solid white' } }
+      state.headerScreenState.businessStyle = { '&:hover': { borderBottom: '1px solid white' } }
+      state.headerScreenState.blogStyle = { '&:hover': { borderBottom: '1px solid white' } }
+      state.headerScreenState.contactStyle = { '&:hover': { borderBottom: '1px solid white' } }
 
       const name = action.payload.name
       const style = { borderBottom: '1px solid white' }

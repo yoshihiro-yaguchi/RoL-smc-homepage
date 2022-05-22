@@ -2,13 +2,11 @@ import styled from '@emotion/styled'
 import { Box, Button, ButtonProps } from '@mui/material'
 
 type Props = {
-  name?: string
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
   children?: React.ReactNode
 }
 
 export const HeaderButton = (props: Props & ButtonProps) => {
-  const { name, onClick, children } = props
+  const { children } = props
   const ButtonBox = styled(Box)({
     float: 'left',
     margin: '20px 10px',
@@ -23,9 +21,7 @@ export const HeaderButton = (props: Props & ButtonProps) => {
   return (
     <>
       <ButtonBox>
-        <HeaderButtonStyled {...props} name={name} onClick={onClick}>
-          {children}
-        </HeaderButtonStyled>
+        <HeaderButtonStyled {...props}>{children}</HeaderButtonStyled>
       </ButtonBox>
     </>
   )

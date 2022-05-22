@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { SxProps, Theme } from '@mui/material'
 
 /**
  * ヘッダーフォーム
@@ -11,15 +11,15 @@ export interface headerForm {
  * ヘッダースクリーンステート
  */
 export interface headerScreenState {
-  aboutStyle: CSSProperties
-  businessStyle: CSSProperties
-  blogStyle: CSSProperties
-  contactStyle: CSSProperties
+  aboutStyle: SxProps<Theme>
+  businessStyle: SxProps<Theme>
+  blogStyle: SxProps<Theme>
+  contactStyle: SxProps<Theme>
 }
 
 export const initHeaderScreenState: headerScreenState = {
-  aboutStyle: { borderBottom: '1px solid white' },
-  businessStyle: {},
-  blogStyle: {},
-  contactStyle: {},
+  aboutStyle: { '&:hover': { borderBottom: '1px solid white' } },
+  businessStyle: { '&:hover': { borderBottom: '1px solid white' } },
+  blogStyle: { '&:hover': { borderBottom: '1px solid white' } },
+  contactStyle: { '&:hover': { borderBottom: '1px solid white' } },
 }

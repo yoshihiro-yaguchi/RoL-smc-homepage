@@ -4,7 +4,7 @@ import { RootState } from 'redux/store'
 import { pzzjg000Operations } from './operations'
 
 export const Blog = () => {
-  const pxzzjh000Actions = useAppSelector((state: RootState) => state.pzzhg000)
+  const pxzzjh000Actions = useAppSelector((state: RootState) => state.header)
   const dispatch = useAppDispatch()
   useEffect(() => {
     dispatch(pzzjg000Operations.init())

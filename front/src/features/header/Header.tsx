@@ -8,12 +8,16 @@ import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { RootState } from 'redux/store'
 import { headerOperations } from './operations'
 import { ROUTER_ENUM } from 'common/rolCommons'
+import { grey } from '@mui/material/colors'
 
 export const Header = () => {
   const HeaderBox = styled(Box)({
-    width: '100%',
+    width: '1440px',
     height: '80px',
     borderBottom: '1px solid black',
+    position: 'fixed',
+    top: '0',
+    backgroundColor: grey[50],
   })
 
   // navigate使用宣言

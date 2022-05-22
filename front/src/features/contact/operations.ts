@@ -18,7 +18,7 @@ export const pzzjg000Operations = {
   countUp:
     (count: number): AppThunk =>
     async (dispatch, getState) => {
-      console.log(getState().pzzhg000.pzzjg000FormState.counter)
+      console.log(getState().header)
       dispatch(pzzhg000Actions.addCount({ addCount: count }))
     },
 }
