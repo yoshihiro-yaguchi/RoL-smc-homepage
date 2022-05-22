@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { initPzzjg000FormState, pzzjg000Form } from './types'
+import { initPzzjg000FormState, pzzjg001Form } from './types'
 
-const initialState: pzzjg000Form = {
+const initialState: pzzjg001Form = {
   pzzjg000FormState: initPzzjg000FormState,
 }
 
-export const pzzhg000States = createSlice({
-  name: 'pzzhg000',
+export const pzzhg001States = createSlice({
+  name: 'pzzhg001',
   initialState,
   reducers: {
     reset: () => initialState,
@@ -16,4 +16,4 @@ export const pzzhg000States = createSlice({
   },
 })
 
-export const { actions } = pzzhg000States
+export const { actions } = pzzhg001States
