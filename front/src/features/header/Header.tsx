@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Box, Typography } from '@mui/material'
-import Image from 'logo/RoL.png'
+import Image from 'pic/header/RoL.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { HeaderButton } from './components/HeaderButton'
 import { brown } from '@mui/material/colors'
@@ -18,6 +18,7 @@ export const Header = () => {
     position: 'fixed',
     top: '0',
     backgroundColor: grey[50],
+    zIndex: '2147483674',
   })
 
   // navigate使用宣言
