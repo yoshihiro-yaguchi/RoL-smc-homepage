@@ -1,17 +1,18 @@
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from 'redux/hooks'
-import { RootState } from 'redux/store'
-import { pzzjg000Operations } from './operations'
+import { useAppDispatch } from 'redux/hooks'
+import { ROUTER_ENUM } from 'common/rolCommons'
 import BusinessImage from 'pic/business/startup-g0fe3ef605_1920.jpg'
 import { Box, Typography } from '@mui/material'
 import { common } from '@mui/material/colors'
 import { ScreenBox, ViewDetailInfo, ViewDetailInfoBox } from 'common/commonComponents'
+import { useNavigate } from 'react-router-dom'
+import { headerOperations } from 'features/header/operations'
 
 export const Business = () => {
-  const pxzzjh000Actions = useAppSelector((state: RootState) => state.header)
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   useEffect(() => {
-    dispatch(pzzjg000Operations.init())
+    dispatch(headerOperations.onClickButtonOperation(ROUTER_ENUM.business, navigate))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
