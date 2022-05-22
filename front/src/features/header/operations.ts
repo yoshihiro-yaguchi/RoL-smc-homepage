@@ -1,24 +1,22 @@
+import { ROUTER_ENUM } from 'common/rolCommons'
+import { NavigateFunction } from 'react-router-dom'
 import { AppThunk } from 'redux/store'
-import { pzzhg000Api } from './api'
-import { actions as pzzhg000Actions } from './reducer'
+import { actions as headerActions } from './reducer'
 
-export const pzzjg000Operations = {
-  init: (): AppThunk => async () => {
-    const params = new URLSearchParams()
-    params.append('method', 'get')
-    const getResponse = await pzzhg000Api.doInit(params)
-    console.log(getResponse.status)
-    console.log(getResponse.data)
+export const headerOperations = {
+  onClickButtonOperation:
+    (name: string, navigate: NavigateFunction): AppThunk =>
+    async (dispatch) => {
+      dispatch(headerActions.onClickButtonhandle({ name: name }))
 
-    const postResponse = await pzzhg000Api.doPost(params)
-    console.log(postResponse.status)
-    console.log(postResponse.data)
-  },
-
-  countUp:
-    (count: number): AppThunk =>
-    async (dispatch, getState) => {
-      console.log(getState().pzzhg000.pzzjg000FormState.counter)
-      dispatch(pzzhg000Actions.addCount({ addCount: count }))
+      if (ROUTER_ENUM.about === name) {
+        navigate(`/${ROUTER_ENUM.about}`)
+      } else if (ROUTER_ENUM.business === name) {
+        navigate(`/${ROUTER_ENUM.business}`)
+      } else if (ROUTER_ENUM.blog === name) {
+        navigate(`/${ROUTER_ENUM.blog}`)
+      } else if (ROUTER_ENUM.contact === name) {
+        navigate(`/${ROUTER_ENUM.contact}`)
+      }
     },
 }

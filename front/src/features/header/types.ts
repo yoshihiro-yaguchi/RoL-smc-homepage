@@ -1,21 +1,25 @@
+import { CSSProperties } from 'react'
+
 /**
- * メイン画面フォーム
+ * ヘッダーフォーム
  */
-export interface pzzjg000Form {
-  pzzjg000FormState: pzzjg000FormState
+export interface headerForm {
+  headerScreenState: headerScreenState
 }
 
 /**
- * メイン画面ステート
+ * ヘッダースクリーンステート
  */
-interface pzzjg000FormState {
-  hoge: string
-  counter: number
+export interface headerScreenState {
+  aboutStyle: CSSProperties
+  businessStyle: CSSProperties
+  blogStyle: CSSProperties
+  contactStyle: CSSProperties
 }
-/**
- * メイン画面初期化
- */
-export const initPzzjg000FormState: pzzjg000FormState = {
-  hoge: '',
-  counter: 0,
+
+export const initHeaderScreenState: headerScreenState = {
+  aboutStyle: { borderBottom: '1px solid white' },
+  businessStyle: {},
+  blogStyle: {},
+  contactStyle: {},
 }

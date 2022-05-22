@@ -1,4 +1,5 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
+import { headerStates } from 'features/header/reducer'
 import { pzzhg000States } from 'features/pzzhg000/reducer'
 import { pzzhg001States } from 'features/pzzhg001/reducer'
 
@@ -6,6 +7,7 @@ export const store = configureStore({
   reducer: {
     pzzhg000: pzzhg000States.reducer,
     pzzhg001: pzzhg001States.reducer,
+    header: headerStates.reducer,
   },
 })
 
