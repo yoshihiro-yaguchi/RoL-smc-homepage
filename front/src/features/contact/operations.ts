@@ -1,6 +1,5 @@
 import { AppThunk } from 'redux/store'
 import { pzzhg000Api } from './api'
-import { actions as pzzhg000Actions } from './reducer'
 
 export const pzzjg000Operations = {
   init: (): AppThunk => async () => {
@@ -19,6 +18,5 @@ export const pzzjg000Operations = {
     (count: number): AppThunk =>
     async (dispatch, getState) => {
       console.log(getState().header)
-      dispatch(pzzhg000Actions.addCount({ addCount: count }))
     },
 }

@@ -2,6 +2,7 @@ import { AppThunk } from 'redux/store'
 import { pzzhg000Api } from './api'
 import { actions as pzzhg000Actions } from './reducer'
 
+// TODO: 関数名の変更
 export const pzzjg000Operations = {
   init: (): AppThunk => async () => {
     const params = new URLSearchParams()

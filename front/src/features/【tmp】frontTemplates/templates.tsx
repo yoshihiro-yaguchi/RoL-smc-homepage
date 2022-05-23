@@ -1,10 +1,13 @@
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from 'redux/hooks'
-import { RootState } from 'redux/store'
+// TODO: コメントアウトの削除
+import { useAppDispatch /** , useAppSelector */ } from 'redux/hooks'
+// TODO: コメントアウトの削除
+// import { RootState } from 'redux/store'
 import { pzzjg000Operations } from './operations'
 
+// TODO:関数名の変更
 export const Pzzhg000 = () => {
-  const pxzzjh000Actions = useAppSelector((state: RootState) => state.header)
+  // const pxzzjh000Actions = useAppSelector((state: RootState) => state.header)
   const dispatch = useAppDispatch()
   useEffect(() => {
     dispatch(pzzjg000Operations.init())

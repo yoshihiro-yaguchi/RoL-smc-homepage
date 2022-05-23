@@ -43,11 +43,9 @@ export const About = () => {
       <ScreenBox>
         {/* タイトル */}
         <Box>
-          <Box>
-            <Typography fontSize={25}>
-              <strong>About Me.</strong>
-            </Typography>
-          </Box>
+          <Typography fontSize={25}>
+            <strong>About Me.</strong>
+          </Typography>
         </Box>
         <Box>
           {/* 詳細情報 */}

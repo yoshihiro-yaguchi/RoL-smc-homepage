@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useAppDispatch } from 'redux/hooks'
 import { ROUTER_ENUM } from 'common/rolCommons'
-import BusinessImage from 'pic/business/startup-g0fe3ef605_1920.jpg'
+import BusinessImage from 'pic/business/startup-ga3488e2dd_1920.jpg'
 import { Box, Typography } from '@mui/material'
 import { common } from '@mui/material/colors'
 import { ScreenBox, ViewDetailInfo, ViewDetailInfoBox } from 'common/commonComponents'
@@ -42,11 +42,9 @@ export const Business = () => {
       <ScreenBox>
         {/* タイトル */}
         <Box>
-          <Box>
-            <Typography fontSize={25}>
-              <strong>Business.</strong>
-            </Typography>
-          </Box>
+          <Typography fontSize={25}>
+            <strong>Business.</strong>
+          </Typography>
         </Box>
         <Box>
           <ViewDetailInfoBox>

@@ -1,21 +1,28 @@
 /**
  * メイン画面フォーム
  */
-export interface pzzjg000Form {
-  pzzjg000FormState: pzzjg000FormState
+export interface contactForm {
+  contactState: contactState
 }
 
 /**
- * メイン画面ステート
+ * contact画面ステート
  */
-interface pzzjg000FormState {
-  hoge: string
-  counter: number
+export interface contactState {
+  companyName: string
+  userName: string
+  mailAddress: string
+  telephoneNumber: string
+  contents: string
 }
+
 /**
- * メイン画面初期化
+ * contact画面初期化
  */
-export const initPzzjg000FormState: pzzjg000FormState = {
-  hoge: '',
-  counter: 0,
+export const initContactState: contactState = {
+  companyName: 'a',
+  userName: 'b',
+  mailAddress: 'c',
+  telephoneNumber: 'd',
+  contents: 'e',
 }

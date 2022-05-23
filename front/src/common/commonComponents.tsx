@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Box, BoxProps, Typography } from '@mui/material'
-import { blueGrey, common } from '@mui/material/colors'
+import { blueGrey, common, red } from '@mui/material/colors'
 
 type ViewInfoProps = {
   title?: string
@@ -10,6 +10,7 @@ type ViewInfoProps = {
   borderRadius?: string
   titlewidth?: string
   infoMarginLeft?: string
+  required?: boolean
 }
 
 /**
@@ -60,9 +61,7 @@ export const ViewDetailInfoBox = (props: ViewInfoProps & BoxProps) => {
  * @returns
  */
 export const ViewDetailInfo = (props: ViewInfoProps & BoxProps) => {
-  const { title, children, margin, padding, borderRadius, titlewidth, infoMarginLeft } = props
-
-  console.log(titlewidth)
+  const { title, children, margin, padding, borderRadius, titlewidth, infoMarginLeft, required } = props
   return (
     <>
       <Box
@@ -87,6 +86,11 @@ export const ViewDetailInfo = (props: ViewInfoProps & BoxProps) => {
         >
           <Typography sx={{ textAlign: 'center' }}>
             <strong>{title}</strong>
+            <span hidden={!required}>
+              <Typography sx={{ display: 'inline' }} color={red[700]}>
+                *
+              </Typography>
+            </span>
           </Typography>
         </Box>
         {/* 情報 */}
@@ -102,4 +106,5 @@ ViewDetailInfo.defaultProps = {
   padding: '5px',
   titlewidth: '120px',
   infoMarginLeft: '130px',
+  required: false,
 }

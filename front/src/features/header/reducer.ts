@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { ROUTER_ENUM } from 'common/rolCommons'
-import { initHeaderScreenState, headerForm } from './types'
+import { initHeaderScreenState, headerForm, headerScreenState } from './types'
 
 const initialState: headerForm = {
   headerScreenState: initHeaderScreenState,
@@ -11,7 +10,6 @@ export const headerStates = createSlice({
   initialState,
   reducers: {
     reset: () => initialState,
-    // addCount: (state, action: PayloadAction<{ addCount: number }>) => {
 
     // },
     onClickButtonhandle: (state, action: PayloadAction<{ name: string }>) => {
@@ -21,21 +19,9 @@ export const headerStates = createSlice({
       state.headerScreenState.blogStyle = { '&:hover': { borderBottom: '1px solid white' } }
       state.headerScreenState.contactStyle = { '&:hover': { borderBottom: '1px solid white' } }
 
-      const name = action.payload.name
       const style = { borderBottom: '1px solid white' }
 
-      if (ROUTER_ENUM.about === name) {
-        state.headerScreenState.aboutStyle = style
-      }
-      if (ROUTER_ENUM.business === name) {
-        state.headerScreenState.businessStyle = style
-      }
-      if (ROUTER_ENUM.blog === name) {
-        state.headerScreenState.blogStyle = style
-      }
-      if (ROUTER_ENUM.contact === name) {
-        state.headerScreenState.contactStyle = style
-      }
+      state.headerScreenState[`${action.payload.name}Style` as keyof headerScreenState] = style
     },
   },
 })

@@ -1,19 +1,28 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { initPzzjg000FormState, pzzjg000Form } from './types'
+import { contactForm, contactState, initContactState } from './types'
 
-const initialState: pzzjg000Form = {
-  pzzjg000FormState: initPzzjg000FormState,
+const initialState: contactForm = {
+  contactState: initContactState,
 }
 
-export const pzzhg000States = createSlice({
-  name: 'pzzhg000',
+export const contactStates = createSlice({
+  name: 'contact',
   initialState,
   reducers: {
     reset: () => initialState,
-    addCount: (state, action: PayloadAction<{ addCount: number }>) => {
-      state.pzzjg000FormState.counter = state.pzzjg000FormState.counter + action.payload.addCount
+    // 初期表示時
+    init: (state) => {
+      state.contactState.companyName = 'a'
+      state.contactState.userName = 'b'
+      state.contactState.mailAddress = 'c'
+      state.contactState.telephoneNumber = 'd'
+      state.contactState.contents = 'e'
+    },
+    // テキストインプット時のハンドラ
+    onInputHandle: (state, action: PayloadAction<{ name: string; value: string }>) => {
+      state.contactState[action.payload.name as keyof contactState] = action.payload.value
     },
   },
 })
 
-export const { actions } = pzzhg000States
+export const { actions } = contactStates
