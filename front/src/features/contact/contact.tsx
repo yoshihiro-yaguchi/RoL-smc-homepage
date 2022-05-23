@@ -44,6 +44,7 @@ export const Contact = () => {
           <strong>Contact.</strong>
         </Typography>
       </Box>
+
       <ScreenBox>
         <Box>
           <Typography fontSize={25}>
@@ -52,15 +53,8 @@ export const Contact = () => {
         </Box>
         <ViewDetailInfoBox>
           {/* 貴社名 */}
-          <ViewDetailInfo
-            key="companyName"
-            padding={'10px 5px'}
-            titlewidth="140px"
-            infoMarginLeft="160px"
-            title={`貴社名`}
-          >
+          <ViewDetailInfo padding={'10px 5px'} titlewidth="140px" infoMarginLeft="160px" title={`貴社名`}>
             <TextField
-              key="companyName-input"
               name="companyName"
               value={contactStates.companyName}
               size="small"
@@ -72,7 +66,7 @@ export const Contact = () => {
             />
           </ViewDetailInfo>
           {/* お名前 */}
-          {/* <ViewDetailInfo padding={'10px 5px'} titlewidth="140px" infoMarginLeft="160px" title={`お名前`} required>
+          <ViewDetailInfo padding={'10px 5px'} titlewidth="140px" infoMarginLeft="160px" title={`お名前`} required>
             <TextField
               name="userName"
               value={contactStates.userName}
@@ -83,9 +77,9 @@ export const Contact = () => {
                 dispatch(contactActions.onInputHandle({ name: e.target.name, value: e.target.value }))
               }}
             />
-          </ViewDetailInfo> */}
+          </ViewDetailInfo>
           {/* メールアドレス */}
-          {/* <ViewDetailInfo
+          <ViewDetailInfo
             padding={'10px 5px'}
             titlewidth="140px"
             infoMarginLeft="160px"
@@ -102,9 +96,9 @@ export const Contact = () => {
                 onInputHandle(e)
               }}
             />
-          </ViewDetailInfo> */}
+          </ViewDetailInfo>
           {/* 電話番号 */}
-          {/* <ViewDetailInfo padding={'10px 5px'} titlewidth="140px" infoMarginLeft="160px" title="電話番号">
+          <ViewDetailInfo padding={'10px 5px'} titlewidth="140px" infoMarginLeft="160px" title="電話番号">
             <TextField
               name="telephoneNumber"
               value={contactStates.telephoneNumber}
@@ -115,9 +109,9 @@ export const Contact = () => {
                 onInputHandle(e)
               }}
             />
-          </ViewDetailInfo> */}
+          </ViewDetailInfo>
           {/* お問い合わせ内容 */}
-          {/* <ViewDetailInfo
+          <ViewDetailInfo
             padding={'10px 5px'}
             titlewidth="140px"
             infoMarginLeft="160px"
@@ -137,7 +131,7 @@ export const Contact = () => {
                 onInputHandle(e)
               }}
             />
-          </ViewDetailInfo> */}
+          </ViewDetailInfo>
           <Box sx={{ overflow: 'auto' }}>
             <Button sx={{ marginRight: '5px', float: 'right' }} variant="contained" endIcon={<Send />}>
               送信

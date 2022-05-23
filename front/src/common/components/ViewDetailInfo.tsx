@@ -1,10 +1,8 @@
-import styled from '@emotion/styled'
 import { Box, BoxProps, Typography } from '@mui/material'
 import { blueGrey, common, red } from '@mui/material/colors'
 
 type ViewInfoProps = {
   title?: string
-  children: React.ReactNode
   margin?: string
   padding?: string
   borderRadius?: string
@@ -12,48 +10,6 @@ type ViewInfoProps = {
   infoMarginLeft?: string
   required?: boolean
 }
-
-/**
- * RoLホームページのサイズに合わせたボックス。
- *
- * @param props
- * @returns
- */
-export const ScreenBox = (props: BoxProps) => {
-  const ScreenBox = styled(Box)({
-    width: '1080px',
-    margin: '100px auto',
-  })
-
-  const { children } = props
-
-  return (
-    <>
-      <ScreenBox {...props}>{children}</ScreenBox>
-    </>
-  )
-}
-
-export const ViewDetailInfoBox = (props: ViewInfoProps & BoxProps) => {
-  const { children } = props
-  return (
-    <>
-      <Box
-        sx={{
-          borderRadius: '10px',
-          backgroundColor: blueGrey[100],
-          padding: '5px 5px',
-          margin: '5px 20px',
-          height: '100%',
-          width: '100%',
-        }}
-      >
-        {children}
-      </Box>
-    </>
-  )
-}
-
 /**
  * 詳細情報を表示する部品
  *
@@ -100,6 +56,9 @@ export const ViewDetailInfo = (props: ViewInfoProps & BoxProps) => {
   )
 }
 
+/**
+ * デフォルトProps
+ */
 ViewDetailInfo.defaultProps = {
   borderRadius: '10px',
   margin: '5px',
