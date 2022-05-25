@@ -3,6 +3,29 @@
  */
 export interface contactForm {
   contactState: contactState
+  contactScreenControlState: contactScreenControlState
+}
+
+/**
+ * contact画面コントロール
+ */
+export interface contactScreenControlState {
+  errorDialogOpen: boolean
+  errors: string[]
+  confirmDialogOpen: boolean
+  sendSuccessDialogOpen: boolean
+  sendErrorDialogOpen: boolean
+}
+
+/**
+ * contact画面コントロール初期化
+ */
+export const initContactScreenControlState: contactScreenControlState = {
+  errorDialogOpen: false,
+  errors: [],
+  confirmDialogOpen: false,
+  sendSuccessDialogOpen: false,
+  sendErrorDialogOpen: false,
 }
 
 /**
@@ -20,9 +43,9 @@ export interface contactState {
  * contact画面初期化
  */
 export const initContactState: contactState = {
-  companyName: 'a',
-  userName: 'b',
-  mailAddress: 'c',
-  telephoneNumber: 'd',
-  contents: 'e',
+  companyName: '',
+  userName: '',
+  mailAddress: '',
+  telephoneNumber: '',
+  contents: '',
 }

@@ -12,13 +12,13 @@ import { grey } from '@mui/material/colors'
 
 export const Header = () => {
   const HeaderBox = styled(Box)({
-    width: '1440px',
+    // width: '1440px',
     height: '80px',
     borderBottom: '1px solid black',
-    position: 'fixed',
+    // position: 'fixed',
     top: '0',
     backgroundColor: grey[50],
-    zIndex: '2147483674',
+    zIndex: '100',
   })
 
   // navigate使用宣言

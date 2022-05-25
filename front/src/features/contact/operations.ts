@@ -1,7 +1,8 @@
 import { AppThunk } from 'redux/store'
 import { pzzhg000Api } from './api'
+import { actions as contactActions } from './reducer'
 
-export const pzzjg000Operations = {
+export const contactOperations = {
   init: (): AppThunk => async () => {
     const params = new URLSearchParams()
     params.append('method', 'get')
@@ -14,9 +15,29 @@ export const pzzjg000Operations = {
     console.log(postResponse.data)
   },
 
-  countUp:
-    (count: number): AppThunk =>
-    async (dispatch, getState) => {
-      console.log(getState().header)
-    },
+  onClickSend: (): AppThunk => async (dispatch, getState) => {
+    const { userName, mailAddress, contents } = getState().contact.contactState
+    // validate
+    let validateResult: string[] = []
+    // お名前
+    if (userName === '' || userName === null) {
+      validateResult.push('お名前は入力必須項目です。')
+    }
+    // メールアドレス
+    if (mailAddress === '' || mailAddress === null) {
+      validateResult.push('メールアドレスは入力必須項目です。')
+    }
+    // お問い合わせ内容
+    if (contents === '' || contents === null) {
+      validateResult.push('お問い合わせ内容は入力必須項目です。')
+    }
+
+    // エラーが有る場合は処理中断
+    if (validateResult.length > 0) {
+      dispatch(contactActions.occuredError({ errors: validateResult }))
+      return
+    }
+
+    dispatch(contactActions.controlConfilmDialog({ open: true }))
+  },
 }

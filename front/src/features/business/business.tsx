@@ -32,7 +32,7 @@ export const Business = () => {
         <Typography
           color={common['white']}
           fontSize={100}
-          sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -120%)' }}
+          sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -70%)' }}
         >
           <strong>Business.</strong>
         </Typography>

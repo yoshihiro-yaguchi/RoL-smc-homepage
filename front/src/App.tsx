@@ -11,7 +11,7 @@ import { RouteIndex } from 'features/routeIndex/routeIndex'
 export const App = () => {
   return (
     <BrowserRouter>
-      <Box sx={{ width: '1440px', margin: '0 auto' }}>
+      <Box sx={{ maxWidth: '1440px', margin: '0 auto' }}>
         <Header />
         <Routes>
           <Route index element={<RouteIndex />} />
