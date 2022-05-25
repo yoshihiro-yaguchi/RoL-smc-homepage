@@ -15,6 +15,9 @@ export const contactOperations = {
     console.log(postResponse.data)
   },
 
+  /**
+   * 送信ボタン押下時
+   */
   onClickSend: (): AppThunk => async (dispatch, getState) => {
     const { userName, mailAddress, contents } = getState().contact.contactState
     // validate
@@ -39,5 +42,13 @@ export const contactOperations = {
     }
 
     dispatch(contactActions.controlConfilmDialog({ open: true }))
+  },
+
+  /**
+   * 確認ダイアログ送信ボタン押下時
+   */
+  onClickConfirmDialogOk: (): AppThunk => async (dispatch) => {
+    // api呼び出し処理
+    dispatch(contactActions.controlConfilmDialog({ open: false }))
   },
 }
