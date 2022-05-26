@@ -47,13 +47,14 @@ export const contactOperations = {
     params.append('contents', target.contents)
 
     const result = await contactApi.doSend(params)
+    console.log(result)
 
     dispatch(contactActions.controlConfilmDialog({ open: false }))
 
     if (result.data) {
-      contactActions.controlSuccessAlert({ open: true })
+      dispatch(contactActions.controlSuccessAlert({ open: true }))
     } else {
-      contactActions.controlErrorAlert({ open: false })
+      dispatch(contactActions.controlErrorAlert({ open: false }))
     }
   },
 }
