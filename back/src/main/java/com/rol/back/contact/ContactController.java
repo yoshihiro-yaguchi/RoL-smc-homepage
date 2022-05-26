@@ -21,8 +21,8 @@ public class ContactController {
   private ContactService service;
 
   @PostMapping(value="/doSend")
-  public Boolean doSend(@ModelAttribute ApiDoSendParams params) {
-    return false;
+  public boolean doSend(@ModelAttribute ApiDoSendParams params) throws Exception {
+    return service.send(params);
   }
 
 

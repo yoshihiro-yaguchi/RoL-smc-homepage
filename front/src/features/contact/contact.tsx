@@ -53,9 +53,7 @@ export const Contact = () => {
 
   // ダイアログ送信ボタン押下時ハンドラ
   const onClickDialogSendButton = () => {
-    dispatch(contactActions.controlConfilmDialog({ open: false }))
-    dispatch(contactActions.controlSuccessAlert({ open: true }))
-    dispatch(contactActions.controlErrorAlert({ open: true }))
+    dispatch(contactOperations.onClickConfirmDialogOk())
   }
 
   // 送信成功閉じるボタン押下時

@@ -8,7 +8,7 @@ CREATE TABLE TROLD401(
     , updated_feature varchar(30) comment '更新機能'
     , delete_flg varchar(1) comment '削除フラグ'
     , exclusive_flg varchar(256) comment '更新フラグ'
-    , kisha_name varchar(256) comment '貴社名'
+    , company_name varchar(256) comment '貴社名'
     , user_name varchar(256) comment 'お名前'
     , mail_address varchar(256) comment 'メールアドレス'
     , telephone_number varchar(256) comment '電話番号'
@@ -16,3 +16,4 @@ CREATE TABLE TROLD401(
     , read_flg varchar(1) comment '既読フラグ'
     , primary key(object_id)
 ) COMMENT = 'お問い合わせデータ'
+

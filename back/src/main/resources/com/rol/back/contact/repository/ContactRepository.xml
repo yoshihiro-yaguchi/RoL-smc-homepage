@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rol.back.contact.repository.ContactRepository">
+    <insert id="insertTrold401">
+        INSERT
+        INTO TROLD401(
+            object_id
+            , registered_date
+            , registered_user
+            , registered_feature
+            , delete_flg
+            , exclusive_flg
+            , company_name
+            , user_name
+            , mail_address
+            , telephone_number
+            , content
+            , read_flg
+        )
+        VALUES (
+            #{objectId}
+            , #{registeredDate}
+            , #{registeredUser}
+            , #{registeredFeature}
+            , '0'
+            , '0'
+            , #{companyName}
+            , #{userName}
+            , #{mailAddress}
+            , #{telephoneNumber}
+            , #{contents}
+            , '0'
+        )
+    </insert>
+</mapper>

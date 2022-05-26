@@ -1,20 +1,8 @@
 import { AppThunk } from 'redux/store'
-import { pzzhg000Api } from './api'
+import { contactApi } from './api'
 import { actions as contactActions } from './reducer'
 
 export const contactOperations = {
-  init: (): AppThunk => async () => {
-    const params = new URLSearchParams()
-    params.append('method', 'get')
-    const getResponse = await pzzhg000Api.doInit(params)
-    console.log(getResponse.status)
-    console.log(getResponse.data)
-
-    const postResponse = await pzzhg000Api.doPost(params)
-    console.log(postResponse.status)
-    console.log(postResponse.data)
-  },
-
   /**
    * 送信ボタン押下時
    */
@@ -47,8 +35,25 @@ export const contactOperations = {
   /**
    * 確認ダイアログ送信ボタン押下時
    */
-  onClickConfirmDialogOk: (): AppThunk => async (dispatch) => {
+  onClickConfirmDialogOk: (): AppThunk => async (dispatch, getState) => {
     // api呼び出し処理
+    let target = getState().contact.contactState
+
+    let params = new URLSearchParams()
+    params.append('companyName', target.companyName)
+    params.append('userName', target.userName)
+    params.append('mailAddress', target.mailAddress)
+    params.append('telephoneNumber', target.telephoneNumber)
+    params.append('contents', target.contents)
+
+    const result = await contactApi.doSend(params)
+
     dispatch(contactActions.controlConfilmDialog({ open: false }))
+
+    if (result.data) {
+      contactActions.controlSuccessAlert({ open: true })
+    } else {
+      contactActions.controlErrorAlert({ open: false })
+    }
   },
 }
