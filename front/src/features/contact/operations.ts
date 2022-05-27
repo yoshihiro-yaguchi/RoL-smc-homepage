@@ -54,7 +54,7 @@ export const contactOperations = {
     if (result.data) {
       dispatch(contactActions.controlSuccessAlert({ open: true }))
     } else {
-      dispatch(contactActions.controlErrorAlert({ open: false }))
+      dispatch(contactActions.controlErrorAlert({ open: true }))
     }
   },
 }
