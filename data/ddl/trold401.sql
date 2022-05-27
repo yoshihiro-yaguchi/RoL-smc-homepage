@@ -12,8 +12,7 @@ CREATE TABLE TROLD401(
     , user_name varchar(256) comment 'お名前'
     , mail_address varchar(256) comment 'メールアドレス'
     , telephone_number varchar(256) comment '電話番号'
-    , content text comment 'お問い合わせ内容'
+    , content blob comment 'お問い合わせ内容'
     , read_flg varchar(1) comment '既読フラグ'
     , primary key(object_id)
-) COMMENT = 'お問い合わせデータ'
-
+) COMMENT = 'お問い合わせデータ';
