@@ -221,6 +221,7 @@ export const Contact = () => {
                 variant="contained"
                 color="success"
                 onClick={() => onClickDialogSendButton()}
+                endIcon={<Send />}
               >
                 送信
               </Button>
