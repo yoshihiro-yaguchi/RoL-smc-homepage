@@ -4,7 +4,8 @@ import { Header } from 'features/header/Header'
 import { Box } from '@mui/material'
 import { About } from 'features/about/about'
 import { Business } from 'features/business/business'
-import { Blog } from 'features/blog/blog'
+import { BlogSummary } from 'features/blog/blogSummary'
+import { BlogContent } from 'features/blog/blogContent/blogContent'
 import { Contact } from 'features/contact/contact'
 import { RouteIndex } from 'features/routeIndex/routeIndex'
 
@@ -17,7 +18,8 @@ export const App = () => {
           <Route index element={<RouteIndex />} />
           <Route path="about" element={<About />} />
           <Route path="business" element={<Business />} />
-          <Route path="blog" element={<Blog />} />
+          <Route path="blogSummary" element={<BlogSummary />} />
+          <Route path="BlogContent" element={<BlogContent />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
       </Box>

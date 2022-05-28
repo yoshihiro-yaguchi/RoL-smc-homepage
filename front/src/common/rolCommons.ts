@@ -7,6 +7,6 @@ export const getUrl = () => {
 export const ROUTER_ENUM = {
   about: 'about',
   business: 'business',
-  blog: 'blog',
+  blogSummary: 'blogSummary',
   contact: 'contact',
 }
