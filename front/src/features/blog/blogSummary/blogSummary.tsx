@@ -27,7 +27,13 @@ export const BlogSummary = () => {
           {states.blogSummaryStateList.map((data) => {
             return (
               <>
-                <Cell title={data.title} date={data.registeredDate} blogId={data.objectId} />
+                <Cell
+                  key={data.objectId}
+                  title={data.title}
+                  date={data.registeredDate}
+                  blogId={data.objectId}
+                  onDoubleClick={() => console.log(data.objectId)}
+                />
               </>
             )
           })}

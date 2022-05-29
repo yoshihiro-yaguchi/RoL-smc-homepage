@@ -14,8 +14,8 @@ export const ErrorDialog = (props: Props) => {
       <Dialog open={open} maxWidth={'md'} fullWidth={true}>
         <DialogTitle>エラーが発生しました。</DialogTitle>
         <DialogContent>
-          {errors.map((error: string) => (
-            <DialogContentText>
+          {errors.map((error: string, key) => (
+            <DialogContentText key={key}>
               <Typography color={red[300]}>
                 <strong>{`・${error}`}</strong>
               </Typography>
