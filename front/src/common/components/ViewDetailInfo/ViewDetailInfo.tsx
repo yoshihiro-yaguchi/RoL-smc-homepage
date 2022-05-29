@@ -27,6 +27,7 @@ export const ViewDetailInfo = (props: ViewInfoProps & BoxProps) => {
           margin: margin,
           padding: padding,
           height: '100%',
+          maxWidth: '100%',
           overflow: 'auto',
         }}
       >

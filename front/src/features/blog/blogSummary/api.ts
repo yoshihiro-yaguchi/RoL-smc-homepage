@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { getUrl } from 'common/rolCommons'
+import { getInitReturn } from './types'
 
-export const pzzhg000Api = {
-  doInit: async (params: URLSearchParams) => {
-    return await axios.get<string>(`${getUrl()}sample/getMethod?${params.toString()}`)
+export const blogSummaryApi = {
+  doInit: async () => {
+    return await axios.get<getInitReturn>(`${getUrl()}blogSummary/doInit`)
   },
   doPost: async (params: URLSearchParams) => {
     return await axios.post<string>(`${getUrl()}sample/postMethod`, params)

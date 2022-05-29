@@ -1,24 +1,12 @@
 import { AppThunk } from 'redux/store'
-import { pzzhg000Api } from './api'
-import { actions as pzzhg000Actions } from './reducer'
+import { blogSummaryApi } from './api'
+import { actions as blogActions } from './reducer'
 
-export const pzzjg000Operations = {
-  init: (): AppThunk => async () => {
+export const blogOperations = {
+  init: (): AppThunk => async (dispatch) => {
     const params = new URLSearchParams()
     params.append('method', 'get')
-    const getResponse = await pzzhg000Api.doInit(params)
-    console.log(getResponse.status)
-    console.log(getResponse.data)
-
-    const postResponse = await pzzhg000Api.doPost(params)
-    console.log(postResponse.status)
-    console.log(postResponse.data)
+    const getResponse = await blogSummaryApi.doInit()
+    dispatch(blogActions.doInit({ datas: getResponse.data }))
   },
-
-  countUp:
-    (count: number): AppThunk =>
-    async (dispatch, getState) => {
-      console.log(getState().header)
-      dispatch(pzzhg000Actions.addCount({ addCount: count }))
-    },
 }

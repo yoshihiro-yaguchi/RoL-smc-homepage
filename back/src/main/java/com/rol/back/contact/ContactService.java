@@ -16,7 +16,7 @@ import net.bytebuddy.utility.RandomString;
 @Service
 @AllArgsConstructor
 public class ContactService {
-  ContactRepository repository;
+  private ContactRepository repository;
 
   public boolean send(ApiDoSendParams params) throws Exception {
     InsertTrold401Params reposParam = new InsertTrold401Params();

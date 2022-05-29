@@ -1,26 +1,26 @@
 /**
- * メイン画面フォーム
+ * 初期処理API戻り型
  */
-export interface pzzjg000Form {
-  pzzjg000FormState: pzzjg000FormState
+export interface getInitReturn {
+  // 検索結果
+  result: blogSummaryState[]
 }
 
 /**
- * メイン画面ステート
+ * ブログ一覧画面フォーム
  */
-interface pzzjg000FormState {
-  hoge: string
-  counter: number
-}
-/**
- * メイン画面初期化
- */
-export const initPzzjg000FormState: pzzjg000FormState = {
-  hoge: '',
-  counter: 0,
+export interface blogSummaryForm {
+  blogSummaryStateList: blogSummaryState[]
 }
 
+/**
+ * ブログ一覧画面ステート
+ */
 export interface blogSummaryState {
+  // オブジェクトID
+  objectId: string
   // タイトル
+  title: string
   // 投稿日
+  registeredDate: string
 }

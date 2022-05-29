@@ -1,19 +1,22 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { initPzzjg000FormState, pzzjg000Form } from './types'
+import { blogSummaryForm, getInitReturn } from './types'
 
-const initialState: pzzjg000Form = {
-  pzzjg000FormState: initPzzjg000FormState,
+const initialState: blogSummaryForm = {
+  blogSummaryStateList: [],
 }
 
-export const blogStates = createSlice({
-  name: 'blog',
+export const blogSummaryStates = createSlice({
+  name: 'blogSummary',
   initialState,
   reducers: {
     reset: () => initialState,
-    addCount: (state, action: PayloadAction<{ addCount: number }>) => {
-      state.pzzjg000FormState.counter = state.pzzjg000FormState.counter + action.payload.addCount
+    doInit: (state, action: PayloadAction<{ datas: getInitReturn }>) => {
+      const target = action.payload.datas
+
+      // データ定義
+      state.blogSummaryStateList = target.result
     },
   },
 })
 
-export const { actions } = blogStates
+export const { actions } = blogSummaryStates

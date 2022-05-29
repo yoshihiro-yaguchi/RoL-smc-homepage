@@ -1,7 +1,5 @@
 package com.rol.back.contact.bean.repository;
 
-import java.time.LocalDateTime;
-
 import lombok.Data;
 
 @Data

@@ -11,7 +11,7 @@ export const ScreenBox = (props: BoxProps) => {
 
   return (
     <>
-      <Box sx={{ maxWidth: '1080px', margin: '100px auto' }} {...props}>
+      <Box sx={{ width: '1080px', margin: '100px auto' }} {...props}>
         {children}
       </Box>
     </>

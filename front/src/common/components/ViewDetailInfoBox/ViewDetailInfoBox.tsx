@@ -12,7 +12,8 @@ export const ViewDetailInfoBox = (props: BoxProps) => {
           padding: '5px 5px',
           margin: '5px 20px',
           height: '100%',
-          width: '100%',
+          maxWidth: '100%',
+          overflow: 'auto',
         }}
       >
         {children}

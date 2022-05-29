@@ -1,4 +1,5 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
+import { blogSummaryStates } from 'features/blog/blogSummary/reducer'
 import { contactStates } from 'features/contact/reducer'
 import { headerStates } from 'features/header/reducer'
 
@@ -6,6 +7,7 @@ export const store = configureStore({
   reducer: {
     header: headerStates.reducer,
     contact: contactStates.reducer,
+    blogSummary: blogSummaryStates.reducer,
   },
 })
 
