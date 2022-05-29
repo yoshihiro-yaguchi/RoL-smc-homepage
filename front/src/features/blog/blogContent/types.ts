@@ -1,21 +1,33 @@
 /**
- * メイン画面フォーム
+ * 初期処理戻り型
  */
-export interface pzzjg000Form {
-  pzzjg000FormState: pzzjg000FormState
+export interface getInitReturn {
+  result: blogContentState
 }
 
 /**
- * メイン画面ステート
+ * ブログコンテンツフォーム
  */
-interface pzzjg000FormState {
-  hoge: string
-  counter: number
+export interface blogContentForm {
+  blogContentState: blogContentState
 }
+
 /**
- * メイン画面初期化
+ * ブログコンテンツステート
  */
-export const initPzzjg000FormState: pzzjg000FormState = {
-  hoge: '',
-  counter: 0,
+export interface blogContentState {
+  objectId: string
+  registeredDate: string
+  title: string
+  content: string
+}
+
+/**
+ * ブログコンテンツステート 初期化
+ */
+export const initBlogContentState: blogContentState = {
+  objectId: '',
+  registeredDate: '',
+  title: '',
+  content: '',
 }

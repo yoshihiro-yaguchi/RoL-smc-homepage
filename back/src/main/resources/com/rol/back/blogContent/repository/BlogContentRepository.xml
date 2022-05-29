@@ -2,17 +2,16 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.rol.back.blogSummary.repository.BlogRepository">
-    <select id="selectTrold301" resultType="com.rol.back.blogSummary.bean.repository.SelectTrold301Returns">
+<mapper namespace="com.rol.back.blogContent.repository.BlogContentRepository">
+    <select id="selectTrold301" resultType="com.rol.back.blogContent.bean.repository.SelectTrold301Returns">
         SELECT
             T1.object_id
-            , T1.title
             , T1.registered_date
+            , T1.title
+            , T1.content
         FROM
             TROLD301 T1
         WHERE
-            delete_flg = '0'
-        ORDER BY
-            registered_date DESC
+            T1.object_id= #{objectId}
     </select>
 </mapper>

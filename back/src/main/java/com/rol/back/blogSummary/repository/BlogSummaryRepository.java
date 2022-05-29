@@ -7,6 +7,6 @@ import com.rol.back.blogSummary.bean.repository.SelectTrold301Returns;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface BlogRepository {
+public interface BlogSummaryRepository {
   public List<SelectTrold301Returns> selectTrold301() throws Exception;
 }

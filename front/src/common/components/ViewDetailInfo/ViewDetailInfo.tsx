@@ -43,10 +43,8 @@ export const ViewDetailInfo = (props: ViewInfoProps & BoxProps) => {
         >
           <Typography sx={{ textAlign: 'center' }}>
             <strong>{title}</strong>
-            <span hidden={!required}>
-              <Typography sx={{ display: 'inline' }} color={red[700]}>
-                *
-              </Typography>
+            <span hidden={!required} style={{ color: red[700] }}>
+              *
             </span>
           </Typography>
         </Box>

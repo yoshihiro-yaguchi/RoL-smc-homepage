@@ -12,10 +12,6 @@ export const contactStates = createSlice({
   reducers: {
     // ステートリセット
     reset: () => initialState,
-    // 初期表示時
-    init: (state) => {
-      console.log(state)
-    },
 
     // テキストインプット時のハンドラ
     onInputHandle: (state, action: PayloadAction<{ name: string; value: string }>) => {

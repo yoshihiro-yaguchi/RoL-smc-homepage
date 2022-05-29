@@ -15,9 +15,9 @@ import lombok.AllArgsConstructor;
 @CrossOrigin(origins = "*")
 @AllArgsConstructor
 @RequestMapping("blogSummary")
-public class BlogController {
+public class BlogSummaryController {
 
-  private BlogService service;
+  private BlogSummaryService service;
 
   @GetMapping(value="/doInit")
   public ApiDoInitReturns doInit() throws Exception{

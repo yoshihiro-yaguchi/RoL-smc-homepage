@@ -24,13 +24,6 @@ import { contactOperations } from './operations'
 
 export const Contact = () => {
   const dispatch = useAppDispatch()
-
-  // 初期表示
-  useEffect(() => {
-    dispatch(contactActions.init())
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
   // 画面項目
   const contactStates = useAppSelector((s: RootState) => s.contact.contactState)
   // 画面コントロール

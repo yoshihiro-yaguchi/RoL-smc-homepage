@@ -5,14 +5,20 @@ import { blogOperations } from './operations'
 import { ScreenBox, ViewDetailInfoBox } from 'common/commonComponents'
 import { Box, Typography } from '@mui/material'
 import { Cell } from './components/Cell'
+import { useNavigate } from 'react-router-dom'
 
 export const BlogSummary = () => {
   const states = useAppSelector((state: RootState) => state.blogSummary)
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
   useEffect(() => {
     dispatch(blogOperations.init())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const paging = (blogId: string) => {
+    dispatch(blogOperations.doPaging(blogId, navigate))
+  }
 
   return (
     <>
@@ -24,17 +30,17 @@ export const BlogSummary = () => {
         </Box>
 
         <ViewDetailInfoBox>
-          {states.blogSummaryStateList.map((data) => {
+          {states.blogSummaryStateList.map((data, key) => {
             return (
-              <>
+              <React.Fragment key={key}>
                 <Cell
                   key={data.objectId}
                   title={data.title}
                   date={data.registeredDate}
                   blogId={data.objectId}
-                  onDoubleClick={() => console.log(data.objectId)}
+                  onDoubleClick={() => console.log(paging(data.objectId))}
                 />
-              </>
+              </React.Fragment>
             )
           })}
         </ViewDetailInfoBox>
