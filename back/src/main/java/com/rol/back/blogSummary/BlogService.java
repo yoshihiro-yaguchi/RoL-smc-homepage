@@ -21,7 +21,6 @@ public class BlogService {
 
     ApiDoInitReturns returnData = new ApiDoInitReturns();
     returnData.setResult(result);
-    System.out.println(returnData);
 
     return returnData;
   }
