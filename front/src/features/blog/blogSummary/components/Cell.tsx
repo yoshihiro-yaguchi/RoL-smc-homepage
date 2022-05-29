@@ -15,7 +15,7 @@ export const Cell = (props: Props & BoxProps) => {
         {...props}
         sx={{
           float: 'left',
-          width: '329px',
+          width: '500px',
           backgroundColor: common['white'],
           margin: '2px 2px',
           borderRadius: '5px',
