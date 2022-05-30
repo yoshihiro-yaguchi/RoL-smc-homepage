@@ -40,7 +40,7 @@ export const Header = () => {
   }
   // ボタンクリックハンドラ
   const onClickBlogButtonHandle = () => {
-    dispatch(headerOperations.onClickButtonOperation(ROUTER_ENUM.blogSummary, navigate))
+    dispatch(headerOperations.onClickButtonOperation(ROUTER_ENUM.blog, navigate))
   }
   // ボタンクリックハンドラ
   const onClickContactButtonHandle = () => {
@@ -71,11 +71,7 @@ export const Header = () => {
             <Typography>Business</Typography>
           </HeaderButton>
           {/* Blog */}
-          <HeaderButton
-            sx={screenState.blogStyle}
-            name={ROUTER_ENUM.blogSummary}
-            onClick={() => onClickBlogButtonHandle()}
-          >
+          <HeaderButton sx={screenState.blogStyle} name={ROUTER_ENUM.blog} onClick={() => onClickBlogButtonHandle()}>
             <Typography>Blog</Typography>
           </HeaderButton>
           {/* CONTACT */}

@@ -20,7 +20,9 @@ export const BlogContent = () => {
   return (
     <>
       <ScreenBox>
-        <Typography>{state.blogContentState.title}</Typography>
+        <Typography fontSize={40}>
+          <strong>{state.blogContentState.title}</strong>
+        </Typography>
         <ReactMarkdown>{state.blogContentState.content}</ReactMarkdown>
       </ScreenBox>
     </>

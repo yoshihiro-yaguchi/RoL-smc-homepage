@@ -13,8 +13,8 @@ export const headerOperations = {
         navigate(`/${ROUTER_ENUM.about}`)
       } else if (ROUTER_ENUM.business === name) {
         navigate(`/${ROUTER_ENUM.business}`)
-      } else if (ROUTER_ENUM.blogSummary === name) {
-        navigate(`/${ROUTER_ENUM.blogSummary}`)
+      } else if (ROUTER_ENUM.blog === name) {
+        navigate('/blogSummary')
       } else if (ROUTER_ENUM.contact === name) {
         navigate(`/${ROUTER_ENUM.contact}`)
       }
