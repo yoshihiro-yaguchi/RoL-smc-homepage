@@ -229,7 +229,7 @@ export const Contact = () => {
         errors={contactScreenControl.errors}
         onOk={() => errorDialogOnOk()}
       />
-      <Box sx={{ width: '300px', position: 'fixed', top: '300px', right: '50px' }}>
+      <Box sx={{ width: '300px', position: 'fixed', bottom: '20px', right: '50px' }}>
         {/* 送信成功アラート */}
         <Collapse in={contactScreenControl.sendSuccessDialogOpen}>
           <Alert
