@@ -59,7 +59,7 @@ export const BlogSummary = () => {
                   title={data.title}
                   date={data.registeredDate}
                   blogId={data.objectId}
-                  onDoubleClick={() => console.log(paging(data.objectId))}
+                  onDoubleClick={() => paging(data.objectId)}
                 />
               </React.Fragment>
             )
