@@ -1,6 +1,6 @@
 // APIURL
 export const getUrl = () => {
-  return 'http://localhost:8080/'.toString()
+  return 'http://35.194.126.169:8080/'.toString()
 }
 
 // routerEnum
